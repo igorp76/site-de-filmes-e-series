@@ -1,0 +1,60 @@
+body {
+    color:white;
+    background: black;
+    margin: 0px;
+    font-family: "Press Start 2P", system-ui;
+}
+
+header {
+    border-bottom : solid 2px rgb(255, 0, 0);
+    padding: 20px;
+    font-size: 37px;
+    color: rgb(128, 9, 9);
+}
+
+.chamada {
+    background-color: #3d0707; /* Cor original */
+    padding-bottom: 70px;
+    padding-top: 38px;
+    display: flex;
+    justify-content: center;
+    transition: background-image 0.5s ease; /* Transição suave */
+}
+
+/* Efeito de hover: muda para um gradiente de preto e vermelho */
+.chamada:hover {
+    background-image: linear-gradient(to right, black, rgb(255, 0, 0));
+}
+
+.chamada-texto{
+    margin-right: 5%;
+}
+
+img{
+    height: 170px;
+}
+
+.categoria-videos {
+    display: flex;
+    overflow-x: 0;
+    gap: 10px;
+}
+
+.categoria {
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+/* Efeito de tremor mais natural (para cima, baixo, esquerda e direita) */
+@keyframes tremor-normal {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-1px, 1px); }
+  40% { transform: translate(1px, -1px); }
+  60% { transform: translate(-1px, 1px); }
+  80% { transform: translate(1px, -1px); }
+  100% { transform: translate(0, 0); }
+}
+
+.imagem-tremor:hover {
+  animation: tremor-normal 0.3s infinite;
+}
