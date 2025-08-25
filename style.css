@@ -13,17 +13,16 @@ header {
 }
 
 .chamada {
-    background-color: #3d0707; /* Cor original */
+    background-color: #3d0707; 
     padding-bottom: 70px;
     padding-top: 38px;
     display: flex;
     justify-content: center;
-    transition: background-image 0.5s ease; /* Transição suave */
+    transition: background-image 0.5s ease;
 }
 
-/* Efeito de hover: muda para um gradiente de preto e vermelho */
 .chamada:hover {
-    background-image: linear-gradient(to right, black, rgb(255, 0, 0));
+    background-image: linear-gradient(to right, black 50%, rgb(255, 0, 0) 50%);
 }
 
 .chamada-texto{
@@ -36,7 +35,7 @@ img{
 
 .categoria-videos {
     display: flex;
-    overflow-x: 0;
+    overflow-x: auto;
     gap: 10px;
 }
 
@@ -57,4 +56,19 @@ img{
 
 .imagem-tremor:hover {
   animation: tremor-normal 0.3s infinite;
+}
+
+
+/* Nova animação para rotação "engraçada" */
+@keyframes rotacao-engracada {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Aplica a nova animação à imagem do iframe */
+.chamada iframe:hover {
+    animation: rotacao-engracada 0.5s infinite;
 }
